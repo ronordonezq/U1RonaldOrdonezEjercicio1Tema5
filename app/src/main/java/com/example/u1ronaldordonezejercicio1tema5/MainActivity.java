@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -104,5 +105,20 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         polygon.setFillColor(Color.GREEN);
 
 
+    }
+
+    public void ir_rectorado(View view) {
+    }
+
+    public void ir_postgrado(View view) {
+    }
+
+    public void ir_campus(View view) {
+    }
+
+    public void ir_admision(View view) {
+    }
+
+    public void ver_todo(View view) {
     }
 }

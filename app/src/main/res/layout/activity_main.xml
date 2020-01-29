@@ -13,4 +13,61 @@
         android:layout_weight="80">
 
     </fragment>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:background="#000000"
+            android:onClick="ir_rectorado"
+            android:text="RECTORADO"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:background="#000000"
+            android:onClick="ir_campus"
+            android:text="CAMPUS"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:background="#000000"
+            android:onClick="ir_postgrado"
+            android:text="POSTGRADO"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:background="#000000"
+            android:onClick="ir_admision"
+            android:text="ADMISIÓN"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:background="#000000"
+            android:onClick="ver_todo"
+            android:text="VER TODO"/>
+    </LinearLayout>
+
+
 </LinearLayout>
