@@ -25,9 +25,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
     GoogleMap mapa;
     Polygon polygon= null;
-    List<LatLng> latLngList= new ArrayList<>();
-    List<Marker> markerList = new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +51,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mapa = googleMap;
         mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-18.007633, -70.239271), 14));
 
-        mapa.addMarker(new MarkerOptions().position(new LatLng(-18.009603, -70.242777)).title("RECTORADO")
+        mapa.addMarker(new MarkerOptions().position(new LatLng(-18.009462, -70.242867)).title("RECTORADO")
                 .snippet("Rectorado de la UPT").icon(BitmapDescriptorFactory.fromResource(R.mipmap.marker)));
         PolygonOptions Rectorado = new PolygonOptions()
                 .add(new LatLng(-18.009404, -70.243060),
@@ -76,7 +73,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         polygon = mapa.addPolygon(Postgrado);
         polygon.setFillColor(Color.MAGENTA);
 
-        mapa.addMarker(new MarkerOptions().position(new LatLng(-18.005680, -70.225905)).title("CAMPUS")
+        mapa.addMarker(new MarkerOptions().position(new LatLng(-18.005937, -70.225869)).title("CAMPUS")
                 .snippet("Campus Capanique").icon(BitmapDescriptorFactory.fromResource(R.mipmap.marker)));
         PolygonOptions Campus = new PolygonOptions()
                 .add(new LatLng(-18.006130, -70.226645),
@@ -92,7 +89,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         polygon = mapa.addPolygon(Campus);
         polygon.setFillColor(Color.GREEN);
 
-        mapa.addMarker(new MarkerOptions().position(new LatLng(-18.013489, -70.250145)).title("ADMISION")
+        mapa.addMarker(new MarkerOptions().position(new LatLng(-18.013423, -70.250042)).title("ADMISION")
                 .snippet("Admision UPT").icon(BitmapDescriptorFactory.fromResource(R.mipmap.marker)));
         PolygonOptions Admision = new PolygonOptions()
                 .add(new LatLng(-18.013376, -70.250052),
@@ -102,23 +99,33 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
                 );
         polygon = mapa.addPolygon(Admision);
+        polygon.setStrokeColor(Color.rgb(179, 95, 12));
         polygon.setFillColor(Color.GREEN);
 
 
     }
 
     public void ir_rectorado(View view) {
+        mapa.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                new LatLng(-18.009462, -70.242867), 20));
     }
 
     public void ir_postgrado(View view) {
+        mapa.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                new LatLng(-18.004905, -70.235160), 19));
     }
 
     public void ir_campus(View view) {
+        mapa.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                new LatLng(-18.005937, -70.225869), 18));
     }
 
     public void ir_admision(View view) {
+        mapa.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                new LatLng(-18.013423, -70.250042), 21));
     }
 
     public void ver_todo(View view) {
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-18.007633, -70.239271), 14));
     }
 }
